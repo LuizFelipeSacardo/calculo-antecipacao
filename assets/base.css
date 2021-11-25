@@ -1,0 +1,11 @@
+@import url(normalize.css);
+
+:root{
+  box-sizing: border-box;
+  --background-color-01: #444444;
+  --background-color-02: #aaaaaa;
+  --text-color-01: #DDDDDD;
+  --text-color-02: #000000;
+  --text-color-03: #FFFFFF;
+  --contrast-color-01: red;
+}

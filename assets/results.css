@@ -1,0 +1,51 @@
+.results__output{
+  height: 50px;
+  margin: 8px 4px;
+  color: var(--text-color-01);  
+  border-radius: 5px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: var(--background-color-01);
+  padding: 15px;
+}
+
+.results__title{
+  text-align: center;
+  border-bottom: 1px solid black;
+  margin-bottom: 0.75rem;
+}
+
+.results-table{
+  text-align: center;
+  margin: 0 4px;
+}
+
+.results-table__installment{
+  width: 15vw;
+}
+
+.results-table__fee{
+  width: 30vw;
+}
+
+.results-table__net-value{
+  width: 40vw;
+}
+.results-table__percentage{
+  width: 15vw;
+}
+
+table, td, th{
+  border-bottom: 1px solid black;
+  border-collapse: collapse;
+}
+
+.results--hide{
+  display: none;
+}
+
+.text-highlight{
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--text-color-03);
+}

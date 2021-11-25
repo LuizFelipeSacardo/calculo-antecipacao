@@ -1,0 +1,11 @@
+.header{
+  display: flex;
+  justify-content: space-evenly;  
+  height: 110px;
+  background-color: var(--background-color-01);
+}
+
+.header__title{
+  text-align: center;  
+  color: var(--text-color-01);
+}
