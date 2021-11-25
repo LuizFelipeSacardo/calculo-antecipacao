@@ -5,6 +5,16 @@
   background-color: var(--background-color-01);
 }
 
+@media screen and (min-width: 480px) {
+  .header{
+    max-width: 720px;
+    margin: auto; 
+  }
+  .header__title{
+    font-size: 2rem;
+  }
+}
+
 .header__title{
   text-align: center;  
   color: var(--text-color-01);

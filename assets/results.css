@@ -1,3 +1,16 @@
+@media screen and (min-width: 480px) {
+  .results{
+    max-width: 720px;
+    margin: auto;  
+    background-color: var(--background-color-03);
+  }  
+
+  .results__title{
+    margin-top: 0;    
+    background-color: var(--background-color-03);
+  }  
+}
+
 .results__output{
   height: 50px;
   margin: 8px 4px;
@@ -13,6 +26,7 @@
   text-align: center;
   border-bottom: 1px solid black;
   margin-bottom: 0.75rem;
+  padding-top: 0.5rem;
 }
 
 .results-table{

@@ -4,8 +4,16 @@
   box-sizing: border-box;
   --background-color-01: #444444;
   --background-color-02: #aaaaaa;
+  --background-color-03: #ecececb2;
   --text-color-01: #DDDDDD;
   --text-color-02: #000000;
   --text-color-03: #FFFFFF;
   --contrast-color-01: red;
+}
+
+@media screen and (min-width: 480px) {
+
+  :root{
+    font-size: 20px;
+  }  
 }

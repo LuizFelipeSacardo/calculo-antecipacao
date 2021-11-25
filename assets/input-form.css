@@ -4,6 +4,17 @@
   align-items: center;
 }
 
+@media screen and (min-width: 480px) {
+  .input-form{
+    max-width: 720px;
+    margin: auto;
+    background-color: var(--background-color-03);
+  }
+  .input-form__button{
+    margin-bottom: 0.5rem;
+  }
+}
+
 .input-form__label{
   padding-top: 4px;
   font-size: 1.2rem;
@@ -19,7 +30,7 @@
 }
 
 .input-form__button{
-  margin: 12px 0;
+  margin-top: 15px;
   width: 65%;
   height: 44px;
   background-color: var(--background-color-01);
