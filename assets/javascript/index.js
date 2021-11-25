@@ -3,12 +3,16 @@ const inputInstallments = document.querySelector('#input-form__installments').va
 const inputMdr = document.querySelector('#input-form__mdr').value;
 const inputFee = document.querySelector('#input-form__fee').value;
 
-const value = inputValue.replace(",", ".");
-const installments = inputInstallments.replace(",", ".");
-const mdr = inputMdr.replace(",", ".");
-const fee = inputFee.replace(",", ".");
+const stringValue = inputValue.replace(",", ".");
+const stringInstallments = inputInstallments.replace(",", ".");
+const stringMdr = inputMdr.replace(",", ".");
+const stringFee = inputFee.replace(",", ".");
 
-const calculate = document.querySelector('#input-form__button');
+value = Number(stringValue);
+installments = Number(stringInstallments);
+mdr = Number(stringMdr);
+fee = Number(stringFee);
+
 
 const resultsSection = document.querySelector('#results');
 const resultsOutput = document.querySelector('#results__output');
@@ -19,21 +23,21 @@ const recebivel = new Recebivel(value, installments, mdr, fee);
 const feeFreeInstallments = recebivel.feeFreeInstallments();
 const fullInstallment = recebivel.value / recebivel.installments;
 
-calculate.addEventListener('click', abstractResult());
-
+//const calculate = document.querySelector('#input-form__button');
+//calculate.addEventListener('click', completeResult());
 
 function errorsValidation(){
   let errors = [];
-  if(!value === typeof Number || value <= 0 || undefined || null){
+  if(!value === typeof Number || value <= 0){
     errors.push("Didige um valor valido no campo 'Valor a ser antecipado'.")
   }
-  if(!installments === typeof Number || installments <= 0 || installments > 12 || undefined || null){
+  if(!installments === typeof Number || installments <= 0 || installments > 12){
     errors.push("Didige um numero de parcelas válido - Entre 1 e 12.")
   }
-  if(!mdr === typeof Number || mdr <= 0 || mdr > 10 || undefined || null){
+  if(!mdr === typeof Number || mdr <= 0 || mdr > 10){
     errors.push("Didige um valor de MDR válido, apenas numeros.")
   }
-  if(!fee === typeof Number || fee <= 0 || fee > 10 || undefined || null){
+  if(!fee === typeof Number || fee <= 0 || fee > 10){
     errors.push("Didige um valor de taxa de antecipação valido, apenas numeros.")
   }
   return errors;
@@ -55,11 +59,11 @@ function abstractResult(){
 
 
 function completeResult(){
+  let errorsList = errorsValidation();
 
-  let errors = errorsValidation();
-
-  if(errors.length > 0){
-        resultsSection.classList.add('results--hide');
+  if(errorsList.length > 0){
+    resultsSection.classList.add('results--hide');
+    console.log(errorsList.length)        
 
   } else{    
     resultsSection.classList.remove('results--hide');
@@ -88,6 +92,6 @@ function completeResult(){
     tr.appendChild(tdEfectiveCost);
   
     resultsTable.appendChild(tr);
-  }
+    }
   }  
 }

@@ -19,18 +19,18 @@
     <section class="data-entry">
       <form action="submit" class="input-form">
         <label for="input-form__value" class="input-form__label">Digite o valor a ser antecipado:</label>
-        <input type="number" name="input-form__value" id="input-form__value" class="input-form__field" placeholder="ex: R$ 10.000,00" required value="1000.00">
+        <input type="number" name="input-form__value" id="input-form__value" class="input-form__field" placeholder="ex: R$ 10.000,00" required>
 
         <label for="input-form__installments" class="input-form__label">Digite o numero de parcelas:</label>
-        <input type="number" name="input-form__installments" id="input-form__installments" class="input-form__field" placeholder="ex: 10" required value="10">
+        <input type="number" name="input-form__installments" id="input-form__installments" class="input-form__field" placeholder="ex: 10" required>
 
         <label for="input-form__mdr" class="input-form__label">Digite a taxa de MDR:</label>
-        <input type="number" name="input-form__mdr" id="input-form__mdr" class="input-form__field" placeholder="ex: 2%" required value="2">
+        <input type="number" name="input-form__mdr" id="input-form__mdr" class="input-form__field" placeholder="ex: 2%" required>
 
         <label for="input-form__fee" class="input-form__label">Digite a taxa de antecipação:</label>
-        <input type="number" name="input-form__fee" id="input-form__fee" class="input-form__field" placeholder="ex: 0.99%" value="1">
-
-        <button class="input-form__button" id="input-form__button">Calcular</button>
+        <input type="number" name="input-form__fee" id="input-form__fee" class="input-form__field" placeholder="ex: 0.99%" required>
+        
+        <button type="button"  class="input-form__button" id="input-form__button" onclick="completeResult()">Calcular</button>        
 
       </form>
     </section>
