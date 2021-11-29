@@ -4,6 +4,7 @@
     margin: auto;  
     background-color: var(--background-color-03);
     padding-bottom: 20px;
+    padding-top: 20px;
   }  
 
   .results__title{

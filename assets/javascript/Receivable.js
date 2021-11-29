@@ -1,4 +1,4 @@
-class Recebivel{
+class Receivable{
   constructor(value, installments, mdr, fee){    
     this.value = value;
     this.installments = installments;
@@ -7,7 +7,7 @@ class Recebivel{
   }
   
   mdrFreeInstallment(){
-    const netInstallment = (this.value - (this.value * (this.mdr/100)))/installments;
+    const netInstallment = (this.value - (this.value * (this.mdr/100)))/this.installments;
     return netInstallment
   }
 
