@@ -32,10 +32,10 @@
 .input-form__button{
   margin-top: 15px;
   width: 65%;
-  height: 44px;
+  height: 60px;
   background-color: var(--background-color-01);
   color: var(--text-color-01);
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   font-weight: 800;
 }
 

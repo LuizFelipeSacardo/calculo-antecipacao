@@ -11,6 +11,12 @@
   --contrast-color-01: red;
 }
 
+.text--highlight{
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: var(--contrast-color-01);
+}
+
 @media screen and (min-width: 480px) {
 
   :root{

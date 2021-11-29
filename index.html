@@ -17,12 +17,12 @@
   </header>  
   <main class="main">
     <section class="data-entry">
-      <form action="submit" class="input-form">
+      <form class="input-form">
         <label for="input-form__value" class="input-form__label">Digite o valor a ser antecipado:</label>
         <input type="number" name="input-form__value" id="input-form__value" class="input-form__field" placeholder="ex: R$ 10.000,00" required>
 
         <label for="input-form__installments" class="input-form__label">Digite o numero de parcelas:</label>
-        <input type="number" name="input-form__installments" id="input-form__installments" class="input-form__field" placeholder="ex: 10" required>
+        <input type="number" name="input-form__installments" id="input-form__installments" class="input-form__field" placeholder="ex: 12" required>
 
         <label for="input-form__mdr" class="input-form__label">Digite a taxa de MDR:</label>
         <input type="number" name="input-form__mdr" id="input-form__mdr" class="input-form__field" placeholder="ex: 2%" required>
@@ -30,16 +30,16 @@
         <label for="input-form__fee" class="input-form__label">Digite a taxa de antecipação:</label>
         <input type="number" name="input-form__fee" id="input-form__fee" class="input-form__field" placeholder="ex: 0.99%" required>
         
-        <button type="button"  class="input-form__button" id="input-form__button" onclick="completeResult()">Calcular</button>        
+        <button type="button"  class="input-form__button" id="input-form__button" onclick="completeResult()">Calcular</button>       
 
       </form>
     </section>
     <section class="results results--hide" id="results">
       <section class="results__abstract">
-        <h3 class="results__title">Resultado Resumido:</h3>
+        <h3 class="results__title" id="results__title">Resultado Resumido:</h3>
         <div class="results__output" id="results__output"></div>
       </section>
-      <section class="results__complete">   
+      <section class="results__complete" id="results__complete">   
         <h3 class="results__title">Resultado detalhado:</h3>     
         <table class="results-table">
           <thead class="results-table__head">

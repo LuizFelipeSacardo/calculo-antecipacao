@@ -13,7 +13,7 @@
 }
 
 .results__output{
-  height: 50px;
+  height: 58px;
   margin: 8px 4px;
   color: var(--text-color-01);  
   border-radius: 5px;
@@ -59,8 +59,14 @@ table, td, th{
   display: none;
 }
 
+.results--error{
+  border: 2px solid var(--contrast-color-01);
+  background-color: var(--background-color-03);
+  color: var(--text-color-02);
+}
+
 .text-highlight{
   font-weight: 800;
   font-size: 1.1rem;
-  color: var(--text-color-03);
+  color: var(--contrast-color-01);
 }
