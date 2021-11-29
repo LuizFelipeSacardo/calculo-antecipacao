@@ -6,23 +6,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Simulador | Venda Antecipada</title>
 
-  <link rel="stylesheet" href="assets/base.css">
-  <link rel="stylesheet" href="assets/header.css">
-  <link rel="stylesheet" href="assets/input-form.css">
-  <link rel="stylesheet" href="assets/results.css">
+  <link rel="stylesheet" href="assets/css/normalize.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/input-form.css">
+  <link rel="stylesheet" href="assets/css/results.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+
 </head>
 <body>
+  
   <header class="header">    
     <h1 class="header__title">Simulação de venda antecipada</h1>
-  </header>  
+  </header> 
+
   <main class="main">
     <section class="data-entry">
       <form class="input-form">
         <label for="input-form__value" class="input-form__label">Digite o valor a ser antecipado:</label>
         <input type="number" name="input-form__value" id="input-form__value" class="input-form__field" placeholder="ex: R$ 10.000,00" required>
 
-        <label for="input-form__installments" class="input-form__label">Digite o numero de parcelas:</label>
-        <input type="number" name="input-form__installments" id="input-form__installments" class="input-form__field" placeholder="ex: 12" required>
+        <label for="input-form__installments" class="input-form__label">Selecione o número de parcelas:</label>
+        <!-- <input type="number" name="input-form__installments" id="input-form__installments" class="input-form__field" placeholder="ex: 12" required> -->
+        <select class="input-form__field" name="input-form__installments" id="input-form__installments" required>
+          <option value="">-- Selecione --</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+          <option value="24">24</option>
+        </select>
 
         <label for="input-form__mdr" class="input-form__label">Digite a taxa de MDR:</label>
         <input type="number" name="input-form__mdr" id="input-form__mdr" class="input-form__field" placeholder="ex: 2%" required>
@@ -40,25 +72,28 @@
         <div class="results__output" id="results__output"></div>
       </section>
       <section class="results__complete" id="results__complete">   
-        <h3 class="results__title">Resultado detalhado:</h3>     
+        <h3 class="results__title">Resultado Detalhado:</h3>     
         <table class="results-table">
           <thead class="results-table__head">
             <tr>
               <th class="results-table__installment">Parcelas</th>
               <th class="results-table__fee">Juros + MDR</th>
               <th class="results-table__net-value">Liquido</th>
-              <th class="results-table__percentage">Custo%</th>
+              <th class="results-table__percentage">Custo %</th>
             </tr>
           </thead>
-          <tbody id="results-table__body">
-            
+          <tbody id="results-table__body">            
             
           </tbody>        
         </table>
       </section>
       </section>
-
+      <footer class="footer">
+        <p class="footer__info">Desenvolvido por: Luiz Felipe Sacardo</p>
+        <p class="footer__contact">Erros, problemas ou duvidas? envie-nos um <a href="mailto:luizfelipe_1992@hotmail.com?subject=Erro/Problema/Duvida" title="">e-mail</a></p>
+      </footer>
   </main>
+
   <script src="assets/javascript/Receivable.js"></script>
   <script src="assets/javascript/index.js"></script>
 

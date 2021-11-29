@@ -15,7 +15,8 @@
 
 .results__output{
   height: 58px;
-  margin: 8px 4px;
+  margin: 0 1px;
+  margin-bottom: 15px;  
   color: var(--text-color-01);  
   border-radius: 5px;
   text-align: center;
@@ -26,14 +27,12 @@
 
 .results__title{
   text-align: center;
-  border-bottom: 1px solid black;
-  margin-bottom: 0.75rem;
-  padding-top: 0.5rem;
+  border-bottom: 1px solid black;  
 }
 
 .results-table{
   text-align: center;
-  margin: 0 4px;
+  margin: 0 4px;  
 }
 
 .results-table__installment{
@@ -64,10 +63,4 @@ table, td, th{
   border: 2px solid var(--contrast-color-01);
   background-color: var(--background-color-03);
   color: var(--text-color-02);
-}
-
-.text-highlight{
-  font-weight: 800;
-  font-size: 1.1rem;
-  color: var(--contrast-color-01);
 }

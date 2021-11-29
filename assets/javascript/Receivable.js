@@ -6,11 +6,13 @@ class Receivable{
     this.fee = fee;
   }
   
+  //method to calculate the value of every installment minus the MDR(fee charged in credit card transactions over the total value of the sale)
   mdrFreeInstallment(){
     const netInstallment = (this.value - (this.value * (this.mdr/100)))/this.installments;
     return netInstallment
   }
 
+  //this method calculates a installment value deducting the MDR and the FEE, considering the FEE % and the average time of the operation
   feeFreeInstallments(){
     const feeFreeInstallments = [];
     const mdrFreeInstallment = this.mdrFreeInstallment();
