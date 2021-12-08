@@ -1,11 +1,11 @@
-//capturing the results elementos to show the results
+//capturing the results elements to show the results
 const resultsSection = document.querySelector('#results');
 const resultsOutput = document.querySelector('#results__output');
 const resultsTable = document.querySelector('#results-table__body');
 const resultsComplete = document.querySelector('#results__complete');
 const resultsTitle = document.querySelector('#results__title');
 
-//Function the captures the input values every time its called. Will be used in the main function to assure that the input values are realy being loaded.
+//Function that captures the input values every time it's called. Will be used in the main function to assure that the input values are realy being loaded.
 function captureInformation(){
   const inputValue = document.querySelector('#input-form__value').value;
   const inputInstallments = document.querySelector('#input-form__installments').value;
