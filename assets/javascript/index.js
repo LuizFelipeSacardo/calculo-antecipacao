@@ -60,7 +60,7 @@ function efectiveCost(receivable){
 
 //shortened output, shows a abstract of the results, will be called in the main function as well
 function abstractResult(receivable){
-  resultsOutput.innerHTML = `O valor liquido a ser recebido seria de <span class="text--highlight"> R$ ${(receivable.value - (receivable.value * (efectiveCost(receivable)/100))).toFixed(2)}</span>, e o custo efetivo com a antecipação desta operação é <span class="text--highlight">${efectiveCost(receivable).toFixed(2)}%</span>.`
+  resultsOutput.innerHTML = `O valor liquido a ser recebido seria de <span class="text--highlight">${(receivable.value - (receivable.value * (efectiveCost(receivable)/100))).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</span>, e o custo efetivo com a antecipação desta operação é <span class="text--highlight">${efectiveCost(receivable).toFixed(2)}%</span>.`
 } 
 
 
@@ -115,10 +115,10 @@ function completeResult(){
         tdInstallment.innerText = `${i+1}x`;
 
         const tdFee = document.createElement('td');
-        tdFee.innerText = `R$ ${(fullInstallment - feeFreeInstallments[i]).toFixed(2)}`;
+        tdFee.innerText = `${(fullInstallment - feeFreeInstallments[i]).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`;
 
         const tdNetValue = document.createElement('td');
-        tdNetValue.innerText = `R$ ${(feeFreeInstallments[i]).toFixed(2)}`;
+        tdNetValue.innerText = `${(feeFreeInstallments[i]).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`;
 
         const tdEfectiveCost = document.createElement('td');
         tdEfectiveCost.innerText = `${((((fullInstallment * (i+1) - installmentsSum))/ (fullInstallment * (i+1)))*100).toFixed(2)}%`
